@@ -1,0 +1,251 @@
+/* #00ffff ---> Blue
+#000000 ---> Black
+#4d4d4d ---> Grey
+#1aff1a ---> Green
+#3366ff ---> New Blue */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Trirong');
+
+:root {
+    --bg-color: #000;
+    --bg2-color: #1a1a1a;
+    --primary-color: #00ffff;
+    --secondary-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.my-portfolio {
+    background-color: var(--bg-color);
+}
+
+/* Nav Section */
+
+.navbar {
+    background-color: var(--bg2-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    transition: all 0.2s ease;
+}
+
+.logo:hover {
+    text-shadow: 0 0 10px var(--primary-color);
+    transform: scale(1.01);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li {
+    list-style: none;
+    margin: 2px;
+    padding: 5px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav-links li a {
+    padding: 3px 15px;
+    border-radius: 10px;
+    color: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.nav-links li a:hover{
+    box-shadow: 0 0 7px var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+/* Home Section */
+
+.home {
+    height: calc(100vh - 45px);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+}
+
+.profile-img {
+    border-radius: 50%;
+    margin-left: 15px;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.profile-img img {
+    width: 35vw;
+    border-radius: 50%;
+}
+
+.profile-info {
+    margin-right: 10px;
+    padding: 0 5px;
+}
+
+.profile-info h1 {
+    padding: 5px 0;
+    font-size: 2.25rem;
+}
+
+.profile-info h1 span {
+    color: var(--primary-color);
+}
+
+.profile-info h3 {
+    padding: 5px 0;
+    font-size: 1.5rem;
+}
+
+.profile-info p {
+    padding: 5px 0;
+    font-size: 1rem;
+}
+
+.social-icons {
+    padding: 5px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    height: 2.2rem;
+    width: 2.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+    transform: scale(1.1);
+}
+
+.hire-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.hire-btn:hover {
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .logo a {
+        padding: 0 5px;
+        font-size: 1.4rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        background-color: var(--bg2-color);
+        top: 55px;
+        right: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px var(--primary-color);
+    }
+
+    .nav-links li {
+        margin: 7px 0;
+        margin-left: 15px;
+        font-size: 1.1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        transition: all 0.3s;
+    }
+
+    .hamburger.rotate-ham {
+        transform: rotate(90deg);
+        text-shadow: 0 0 10px var(--primary-color);
+    }
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+    .profile-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .social-icons {
+        padding: 3px 0;
+        gap: 7px;
+    }
+    
+    .social-icons a {
+        height: 2rem;
+        width: 2rem;
+        font-size: 0.8rem;
+    }
+    
+    .social-icons a:hover {
+        box-shadow: 0 0 8px var(--primary-color);
+        transform: scale(1.08);
+    }
+    
+    .hire-btn {
+        padding: 6px 18px;
+        margin-top: 8px;
+        font-size: 1rem;
+        font-weight: 550;
+    }
+
+    .hire-btn:hover {
+        box-shadow: 0 0 8px var(--primary-color);
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asta's Portfolio</title>
+    <link rel="stylesheet" href="my-portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+</head>
+<body>
+    <div class="my-portfolio" id="my-portfolio">
+        <header class="navbar" id="navbar">
+            <h1 class="logo"><a href="#">Anushanth <span>R</span></a></h1>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
+        </header>
+
+        <section class="home" id="home">
+            <div class="profile-img">
+                <img src="Assets/profile.png" alt="my-profile">
+            </div>
+            <div class="profile-info">
+                <h1>Hi, it's <span>Anushanth</span></h1>
+                <h3>I'm a Front-End Developer</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias deleniti quos velit omnis, sint id reiciendis, quisquam fugiat facere doloremque quasi officia nam repellendus mollitia porro, molestias dolores cumque pariatur?</p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <a href="#" class="hire-btn">Hire Me</a>
+            </div>       
+        </section>
+
+        <section class="about" id="about">
+
+        </section>
+
+    </div>
+
+    <script>
+        const navLinks = document.getElementById('nav-links');
+        const hamburger = document.getElementById('hamburger');
+
+        hamburger.addEventListener ("click", () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('rotate-ham');
+        });
+    </script>
+</body>
+</html>
